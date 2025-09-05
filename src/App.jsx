@@ -1,39 +1,43 @@
-// src/App.js
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./pages/Homepage";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
+// 레이아웃 & 메인 네비
+import MainLayout from "./layout/Mainlayout";
+import StudyHome from "./pages/Homepage";
+import MyPage from "./pages/MyPage";
+import Study from "./pages/Study";
+
+// 스터디 생성
 import Challenge from "./pages/study_subject";
-import Money from "./pages/study_money"
-import Duration from "./pages/study_duration"
-import How from "./pages/study_how"
-import Pass from "./pages/study_pass"
-import Notice from "./pages/study_notice"
-import Finish from "./pages/study_final"
+import Money from "./pages/study_money";
+import Duration from "./pages/study_duration";
+import How from "./pages/study_how";
+import Pass from "./pages/study_pass";
+import Notice from "./pages/study_notice";
+import Finish from "./pages/study_final";
 
-const App = () => {
+export default function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        {/* 홈 */}
-        <Route path="/" element={<Home />} />
+        {/* 공통 레이아웃이 필요한 화면 */}
+        <Route element={<MainLayout />}>
+          <Route path="/" element={<Navigate to="/home" replace />} />
+          <Route path="/home" element={<StudyHome />} />
+          <Route path="/study" element={<Study />} />
+          <Route path="/mypage" element={<MyPage />} />
+        </Route>
 
-        {/* 스터디 생성 - 과목 */}
+        {/* 스터디 생성 (레이아웃 없이) */}
         <Route path="/study/new/subject" element={<Challenge />} />
-        {/* 스터디 생성 - 금액과 인원 */}
         <Route path="/study/new/money" element={<Money />} />
-        {/* 스터디 생성 - 기간 */}
         <Route path="/study/new/duration" element={<Duration />} />
-        {/* 스터디 생성 - 계획/방법(how) */}
         <Route path="/study/new/how" element={<How />} />
-        {/* 스터디 생성 - 기준 설정(pass) */}
         <Route path="/study/new/pass" element={<Pass />} />
-        {/* 스터디 생성 - 공지사항(notice) */}
         <Route path="/study/new/notice" element={<Notice />} />
-        {/* 스터디 생성 - 최종(final) */}
         <Route path="/study/new/final" element={<Finish />} />
+        <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
-};
-
-export default App;
+}
