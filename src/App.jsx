@@ -13,6 +13,7 @@ import StudyAnnounce from "./pages/study_notice";
 import StudySuccess from "./pages/study_pass";
 import StudySubject from "./pages/study_subject";
 import StudyDetail from "./pages/StudyDetail";
+import SmallChallenge from "./pages/SmallChallenge";
 
 
 export default function App() {
@@ -20,13 +21,13 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route element={<MainLayout />}>
-          <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<StudyHome />} />
           <Route path="/study" element={<Study />} />
           <Route path="/mypage" element={<MyPage />} />
           <Route path="/study-detail" element={<StudyDetail />} />
         </Route>
         <Route element={<NoNav />}>
+          <Route path="/" element={<SmallChallenge />} />
           <Route path="/study/new/subject" element={<StudySubject />} />
           <Route path="/study/new/money" element={<StudyMoney />} />
           <Route path="/study/new/duration" element={<StudyPeriod />} />
