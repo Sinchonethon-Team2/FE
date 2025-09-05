@@ -2,7 +2,7 @@
 import React, { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import studies from "../data/studiesmock.json";
-import "../styles/StudyDetail.css";
+import "../styles/studyDetail.css";
 
 import leftIcon   from "../assets/icons/left.png";
 import searchIcon from "../assets/icons/Search.png";

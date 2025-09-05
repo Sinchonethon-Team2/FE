@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Signup.css";
+import "../styles/signup.css";
 
 const SCHOOL_OPTIONS = [
   "홍익대학교",

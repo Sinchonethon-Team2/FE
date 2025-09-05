@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/SmallChallenge.css";
+import "../styles/smallChallenge.css";
 
 import SHLogo from "../assets/icons/SHLogo.png";
 import SHFont from "../assets/icons/SHFont.png"

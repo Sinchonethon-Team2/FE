@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/Study.css";
+import "../styles/study.css";
 
 import logoBlack from "../assets/icons/logo.svg";
 import profileDemo from "../assets/icons/profile_demo.png";

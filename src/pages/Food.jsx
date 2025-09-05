@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Food.css";
 
 import leftIcon from "../assets/icons/left.png";
-import redBar from "../assets/icons/Redbar.png";
+import redBar from "../assets/icons/redbar.png";
 import foodImg from "../assets/icons/food.png";
 
 export default function Food() {

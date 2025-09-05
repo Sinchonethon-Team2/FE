@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import NavbarBottom from "./BottomNav";
-import "./MainLayout.css"
+import "./mainLayout.css"
 
 export default function MainLayout() {
   return (

@@ -2,7 +2,7 @@
 import React, { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import studies from "../data/studiesmock.json";
-import "../styles/Homepage.css";
+import "../styles/homepage.css";
 
 import logoBlack   from "../assets/icons/logo.svg";
 import profileDemo from "../assets/icons/profile_demo.png";
