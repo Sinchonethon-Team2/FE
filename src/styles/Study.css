@@ -17,9 +17,13 @@
   align-items:center;
   justify-content:space-between;
 }
-.st__logo img{  display:block; }
+.st__logo img{  display:block; cursor: pointer;}
 .st__profile{  border:0; background:transparent; padding:0; }
-.st__profile img{ width:100%; height:100%; object-fit:cover; border-radius:50%; }
+.st__profile img{ width:100%; height:100%; object-fit:cover; border-radius:50%; cursor: pointer;}
+.st__profile img:hover{
+  transform: scale(1.05);
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
 
 /* 섹션: 좌우 24px → 내부 요소 width:100% = 342px */
 .st__section{ padding:12px 24px 0; }   /* ✅ 390 - 48 = 342 */
