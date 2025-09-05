@@ -1,0 +1,66 @@
+.lg__page{
+  width:390px;
+  min-height:100svh;
+  margin:0 auto;
+  background:#fff;
+  padding:0 24px 96px;
+  box-sizing:border-box;
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",
+    Roboto,"Helvetica Neue",Arial,"Noto Sans KR",sans-serif;
+}
+
+/* 헤더 */
+.lg__header{
+  display:grid;
+  grid-template-columns:40px 1fr 40px;
+  align-items:center;
+  height:56px;
+}
+.lg__back{
+  width:40px;height:40px;border:0;background:transparent;padding:0;
+  display:grid;place-items:center;cursor:pointer;
+}
+.lg__back img{ width:18px;height:18px; }
+.lg__head-title{
+  text-align:center;font-size:14px;font-weight:700;color:#111;
+}
+.lg__head-spacer{}
+
+/* 타이틀 */
+.lg__welcome{
+  font-size:22px;font-weight:800;color:#111;margin:12px 0 24px;
+}
+
+/* 폼 */
+.lg__form{
+  display:flex;flex-direction:column;gap:20px;
+}
+.lg__field{ position:relative;display:block; }
+.lg__field input{
+  width:100%;padding:12px 0 10px;border:0;outline:0;background:transparent;
+  font-size:14px;color:#111;
+}
+.lg__underline{
+  position:absolute;left:0;right:0;bottom:0;height:1px;background:#ccc;
+}
+.lg__field input:focus + .lg__underline{
+  background:#FA7A1E;height:2px;
+}
+
+/* 버튼 */
+.lg__btn{
+  width:342px;height:56px;border-radius:12px;border:0;
+  font-size:16px;font-weight:700;cursor:pointer;
+  margin:24px auto 0;display:block;
+}
+.lg__btn--primary{ background:#FA7A1E;color:#fff; }
+.lg__btn--primary:disabled{ opacity:.5;cursor:not-allowed; }
+
+/* 회원가입 유도 */
+.lg__signup-cta{
+  text-align:center;margin-top:18px;color:#c05a4a;font-size:12px;
+}
+.lg__signup-link{
+  display:inline-block;margin-top:6px;font-weight:800;color:#333;
+  text-decoration:underline;
+}

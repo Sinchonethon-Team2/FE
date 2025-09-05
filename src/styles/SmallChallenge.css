@@ -1,0 +1,63 @@
+.sc__page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 390px; 
+  min-height: 100vh;
+  margin: 0 auto;
+  background: #fff;
+  text-align: center;
+}
+
+.sc__logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 64px; /* 로고와 버튼 사이 간격 */
+}
+
+.sc__logo-img {
+  width: 120px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.sc__slogan {
+  font-size: 14px;
+  color: #666;
+  margin: 0 0 8px 0;
+}
+
+.sc__title {
+  font-size: 60px;
+  font-weight: 800;
+  color: #000;
+  margin: 0;
+}
+
+.sc__btn {
+  width: 342px;
+  height: 56px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 10px 0;
+}
+
+.sc__btn--login {
+  background: #fa7a1e;
+  color: #fff;
+}
+
+.sc__btn--login:hover {
+  background: #e06612;
+}
+
+.sc__btn--signup {
+  background: transparent;
+  color: #333;
+  font-weight: 500;
+}
