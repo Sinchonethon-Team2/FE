@@ -29,6 +29,7 @@ const StudyHome = () => {
         <div
           className="sh__searchbox sh__searchbox--elev sh__searchbox--chunky"
           onClick={() => navigate("/study-detail")}
+          role="button"
         >
           <input
             className="sh__searchinput"

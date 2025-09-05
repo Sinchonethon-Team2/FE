@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useLocation, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams, useNavigate } from "react-router-dom";
 import "../styles/study_final.css";
 import completeImg from "../assets/icons/study_final.png";
 
@@ -15,6 +15,7 @@ const MOCK_STUDY = {
 const StudyDone = () => {
   const { state } = useLocation();
   const [params] = useSearchParams();
+  const navigate = useNavigate();   // ✅ 추가
 
   const studyId = useMemo(() => {
     const fromState = state?.studyId;
@@ -71,6 +72,15 @@ const StudyDone = () => {
     return () => { alive = false; };
   }, [subject, studyId]);
 
+  // ✅ 3초 뒤 자동 이동
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/study");
+    }, 3000);
+
+    return () => clearTimeout(timer); // cleanup
+  }, [navigate]);
+
   return (
     <div className="sd__page">
       <header className="sd__header">
@@ -90,7 +100,6 @@ const StudyDone = () => {
           <img src={completeImg} alt="완료 일러스트" className="sd__image" />
         </div>
       </main>
-
 
       {error && <div className="sd__toast">{error}</div>}
     </div>

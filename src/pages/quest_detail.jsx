@@ -38,7 +38,10 @@ const StudyDetail = () => {
 
       <section className="sd2__section sd2__section--done">
         <div className="sd2__sectionHead">마감된 챌린지</div>
-        <ul className="sd2__list">
+        <ul 
+        className="sd2__list"
+         onClick={()=>nav("/study/detail/:id/done")}
+        >
           <li className="sd2__item">
             <span className="sd2__itemTitle">Arrays</span>
             <span className="sd2__badge">챌린지 성공</span>

@@ -39,7 +39,7 @@ export default function StudyDetail() {
 
       <ul className="sd__list">
         {list.map((s) => (
-          <li key={s.id} className="sd__card" onClick={() => navigate(`/study/${s.id}`)}>
+          <li key={s.id} className="sd__card" onClick={() => navigate("/study/apply")}>
             <div className="sd__thumbwrap">
               {s.thumbnailUrl ? (
                 <img className="sd__thumbimg" src={s.thumbnailUrl} alt={`${s.title} 썸네일`} />

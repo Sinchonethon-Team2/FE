@@ -51,7 +51,10 @@ const Study = () => {
 
         {/* 342 x 109 카드 - 진행 중 (그라데이션) */}
         <div className="st__card st__card--running">
-          <div className="st__card-body">
+          <div
+          className="st__card-body"
+          onClick={()=>navigate("/study/detail/:id")}
+          >
             <div className="st__pill">스터디장: 김멋사</div>
             <p className="st__desc">자료구조: 알고리즘 쑤시자</p>
             <h3 className="st__title">자료구조</h3>
