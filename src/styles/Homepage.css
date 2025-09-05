@@ -45,7 +45,6 @@
 }
 .sh__searchbtn img { width: 20px; height: 20px; }
 
-.sh__section { padding: 16px; }
 .sh__section-head {
   display: flex; align-items: center; justify-content: space-between;
   margin-bottom: 12px;
@@ -164,3 +163,5 @@
 .sh__section { padding: 16px; }
 .sh__section-head { margin-bottom: 10px; }
 .sh__list { display: grid; gap: 8px; } 
+
+
