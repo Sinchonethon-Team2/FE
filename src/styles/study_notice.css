@@ -1,0 +1,136 @@
+.sp__page {
+  min-height: 100dvh;
+  background: #fff;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp__header {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 44px 1fr 44px;
+  align-items: center;
+  height: 52px;
+  padding: 0 8px;
+  background: #fff;
+  z-index: 5;
+  border-bottom: 1px solid rgba(0,0,0,0.03);
+}
+
+.sp__backbtn {
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sp__headertitle {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.sp__headerright {
+  width: 44px;
+  height: 44px;
+}
+
+.sp__titlewrap {
+  padding: 20px 20px 8px;
+}
+
+.sp__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #111;
+}
+
+.sn__form {
+  padding: 0 20px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sn__label {
+  font-size: 12px;
+  color: #111;
+  margin-top: 6px;
+}
+
+.sn__hint {
+  color: #8f8f8f;
+  font-weight: 400;
+}
+
+.sn__textareaWrap {
+  position: relative;
+}
+
+.sn__floatingIcon {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  transform: translateY(-30%);
+  pointer-events: none;
+}
+
+.sn__avatarCircle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #6aa3ff 0%, #2f6fe7 100%);
+  box-shadow: 0 2px 6px rgba(47, 111, 231, 0.35);
+}
+
+.sn__textarea {
+  width: 100%;
+  resize: none;
+  border: none;
+  border-bottom: 1px solid #DADDE1;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #111;
+  line-height: 1.5;
+  padding: 8px 0 10px;
+  max-height: 360px;
+  overflow: auto;
+  white-space: pre-wrap;
+}
+
+.sn__textarea:focus {
+  border-bottom-color: #EE8120;
+}
+
+.sn__input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #DADDE1;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #111;
+  padding: 10px 0;
+  word-break: break-all;
+}
+
+.sn__input:focus {
+  border-bottom-color: #EE8120;
+}
+
+.sp__footer {
+  position: sticky;
+  bottom: 0;
+  background: #fff;
+  padding: 16px 20px calc(16px + env(safe-area-inset-bottom));
+  border-top: 1px solid rgba(0,0,0,0.04);
+}
