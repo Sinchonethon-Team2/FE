@@ -1,43 +1,32 @@
-import React, { useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useMemo } from "react";
+import { useNavigate } from "react-router-dom";   
 import studies from "../data/studiesmock.json";
 import "../styles/Homepage.css";
 
 import logoBlack from "../assets/icons/logo.svg";
 import profileDemo from "../assets/icons/profile_demo.png";
-import searchIcon from "../assets/icons/Search.png";
-import moreIcon from "../assets/icons/more.svg";
+import searchIcon from "../assets/icons/Search.png";    
+import moreIcon from "../assets/icons/more.svg";      
 
 const StudyHome = () => {
-  const navigate = useNavigate();
-
-
   const studyList = useMemo(() => studies, []);
-
- 
-  const [query, setQuery] = useState("");
-
- 
-  const filteredList = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    if (!q) return studyList;
-    return studyList.filter((s) => s.title.toLowerCase().includes(q));
-  }, [query, studyList]);
+  const navigate = useNavigate();  
 
   return (
     <div className="sh__page">
       <header className="sh__header">
         <div className="sh__logo">
-          <img src={logoBlack} alt="스챌 로고" />
+          <img src={logoBlack} alt="스챌 로고"/>
         </div>
         <button
           className="sh__profile"
           type="button"
-          onClick={() => navigate("/mypage")}
+          onClick={() => navigate("/mypage")}  
         >
           <img src={profileDemo} alt="프로필" />
         </button>
       </header>
+
 
       <section className="sh__search">
         <div className="sh__searchbox sh__searchbox--elev">
@@ -45,14 +34,12 @@ const StudyHome = () => {
             className="sh__searchinput"
             type="text"
             placeholder="과목명을 입력해주세요"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
           />
           <button
             className="sh__searchbtn"
             type="button"
             aria-label="검색"
-            onClick={() => {/* 별도 행동 필요 없지만 버튼 유지 */}}
+            onClick={() => navigate("/search")} 
           >
             <img src={searchIcon} alt="" />
           </button>
@@ -65,7 +52,7 @@ const StudyHome = () => {
           <button
             className="sh__more"
             type="button"
-            onClick={() => navigate("/study")}
+            onClick={() => navigate("/study")} 
           >
             전체보기
             <img src={moreIcon} alt="" />
@@ -73,7 +60,7 @@ const StudyHome = () => {
         </div>
 
         <ul className="sh__list">
-          {filteredList.map((s) => (
+          {studyList.map((s) => (
             <li
               key={s.id}
               className="sh__card sh__card--flat"
@@ -108,11 +95,6 @@ const StudyHome = () => {
               </div>
             </li>
           ))}
-          {filteredList.length === 0 && (
-            <li style={{ padding: "16px", color: "#666", fontSize: 12 }}>
-              검색 결과가 없습니다.
-            </li>
-          )}
         </ul>
       </section>
     </div>

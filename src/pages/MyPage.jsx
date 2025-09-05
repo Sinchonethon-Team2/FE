@@ -7,7 +7,7 @@ import chevronRightIcon from "../assets/icons/Chevron Down.png"; // 오른쪽 �
 
 
 // CSS 파일 import 경로는 실제 프로젝트 구조에 맞게 확인해주세요.
-import '../styles/MyPage.css';
+import "../styles/MyPage.css"
 
 const MyPage = () => {
   const profileImageUrl = "https://i.pravatar.cc/150?u=a042581f4e29026704d";
