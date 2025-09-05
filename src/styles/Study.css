@@ -1,0 +1,109 @@
+/* 페이지 래퍼 */
+.st__page{
+  width:390px;
+  min-height:100svh;
+  margin:0 auto;
+  background:#fff;
+  position:relative;
+  padding-bottom:88px;   /* 하단바 여백 */
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans KR",sans-serif;
+}
+
+/* 헤더: 고정 높이 + 좌우 정렬 */
+.st__header{
+  height:56px;                 /* ✅ 고정 높이 */
+  padding:0 16px;              /* 좌우 여백 */
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.st__logo img{  display:block; }
+.st__profile{  border:0; background:transparent; padding:0; }
+.st__profile img{ width:100%; height:100%; object-fit:cover; border-radius:50%; }
+
+/* 섹션: 좌우 24px → 내부 요소 width:100% = 342px */
+.st__section{ padding:12px 24px 0; }   /* ✅ 390 - 48 = 342 */
+.st__section-title{
+  margin:0 0 12px;
+  font-size:16px; font-weight:700; color:#000;
+}
+
+/* 카드 공통: 폭은 100%로(=342px), 높이 109px 고정 */
+.st__card{
+  width:100%;                  /* ✅ 항상 342px */
+  height:109px;                /* ✅ 요구 높이 */
+  border-radius:16px;
+  display:grid;
+  grid-template-columns:1fr 92px;
+  align-items:center;
+  padding:16px 14px 16px 16px;
+  box-sizing:border-box;
+  overflow:hidden;
+  margin:0 0 12px;
+  border:1px solid #f0f0f0;
+  background:#fff;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+}
+
+/* 첫 번째 카드(모집 중) 텍스트만 강조 */
+.st__card--empty{ background:#fff; }
+.st__empty-text{
+  margin:0;
+  color:#FA502E;              /* 지시한 컬러 */
+  font-size:18px;
+  font-weight:800;
+}
+
+/* 두 번째 카드(진행 중): 내부 박스 제거 + 흰 폰트 */
+.st__card--running{
+  background:linear-gradient(135deg,#ff9b6a 0%,#ff6a5c 100%);
+  color:#fff;
+  border:none;
+  box-shadow:0 12px 28px rgba(255,118,80,0.35);
+}
+.st__pill{ margin:0 0 6px; padding:0; background:transparent; color:#fff; font-size:12px; font-weight:600; }
+.st__desc{ margin:0 0 2px; color:#fff; }
+.st__title{ margin:0; color:#fff; font-size:18px; font-weight:800; padding-bottom: 10px;}
+
+/* 카드 내부 */
+.st__card-body{ display:flex; flex-direction:column; justify-content:center; gap:4px; }
+.st__thumb{ width:92px; height:92px; display:grid; place-items:center; }
+.st__thumb img{ width:100%; height:100%; object-fit:contain; }
+
+/* 프롬프트(또 다른 스터디...) */
+:root{ --orange400:#FF8A3D; --orange100:#FFF0E5; }
+.st__prompt{
+  display:inline-block;
+  margin:18px 0 16px 4px;   /* ✅ 위/아래 더 줌 */
+  padding:6px 10px;
+  color:var(--orange400);
+  background:var(--orange100);
+  border-radius:10px;
+  font-size:12px;
+}
+
+/* 액션 카드(검색하기/개설하기)도 width:100% = 342px, 높이 109px */
+.st__action{
+  width:100%;
+  height:109px;
+  display:grid;
+  grid-template-columns:1fr 92px;
+  align-items:center;
+  padding:16px 14px 16px 16px;
+  border-radius:16px;
+  background:#fff;
+  border:1px solid #f0f0f0;
+  box-shadow:0 8px 24px rgba(0,0,0,0.06);
+  margin:0 0 12px;
+  text-align:left;
+  cursor:pointer;
+}
+.st__action:hover{ box-shadow:0 10px 28px rgba(0,0,0,0.1); transform:translateY(-1px); }
+
+.st__action-text{
+  display:flex; flex-direction:column; justify-content:flex-end; align-items:flex-start;
+}
+.st__action-text h4{ margin:0 0 2px; font-size:16px; font-weight:800; color:#FA502E; }
+.st__action-text p{ margin:0; font-size:12px; color:#666; }
+.st__action-thumb{ width:92px; height:92px; display:grid; place-items:center; }
+.st__action-thumb img{ width:100%; height:100%; object-fit:contain; }
