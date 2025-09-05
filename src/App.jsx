@@ -16,6 +16,9 @@ import Pass from "./pages/study_pass";
 import Notice from "./pages/study_notice";
 import Finish from "./pages/study_final";
 
+// 상세 챌린지
+import StudyDetail from "./pages/quest_detail";
+
 export default function App() {
   return (
     <BrowserRouter>
@@ -36,6 +39,9 @@ export default function App() {
         <Route path="/study/new/pass" element={<Pass />} />
         <Route path="/study/new/notice" element={<Notice />} />
         <Route path="/study/new/final" element={<Finish />} />
+
+        {/* 상세 퀘스트 페이지(레이아웃 없이) */}
+        <Route path="/study/detail/:id" element={<StudyDetail />} />
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
     </BrowserRouter>
