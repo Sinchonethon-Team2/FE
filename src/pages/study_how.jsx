@@ -1,10 +1,12 @@
 import React, { useState, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/study_how.css";
 import CTAButton from "../components/CTAButton"; 
 
 const StudyOperate = () => {
   const navigate = useNavigate();
+
+  const { state: prevState } = useLocation();
 
   const [title, setTitle] = useState("");
   const [challengeCnt, setChallengeCnt] = useState("");
@@ -17,6 +19,7 @@ const StudyOperate = () => {
   const goNext = () => {
     navigate("/study/new/pass", {
       state: {
+        ...prevState,
         title: title.trim(),
         challengeCount: Number(challengeCnt),
       },

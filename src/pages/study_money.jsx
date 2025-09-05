@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/study_money.css";
 import CTAButton from "../components/CTAButton";
 
 const StudyMoney = () => {
   const navigate = useNavigate();
+  
+  const {state: prevState} = useLocation();
+
   const [headcount, setHeadcount] = useState("");
   const [deposit, setDeposit] = useState("");
 
   const goNext = () => {
-    navigate("/study/new/duration", { state: { headcount, deposit } });
+    navigate("/study/new/duration", { state: { ...prevState, headcount, deposit } });
   };
 
   const canNext = String(headcount).trim() !== "" && String(deposit).trim() !== "";

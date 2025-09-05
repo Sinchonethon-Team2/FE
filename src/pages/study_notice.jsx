@@ -7,7 +7,7 @@ const MAX_TEXTAREA_H = 360;
 
 const StudyAnnounce = () => {
   const navigate = useNavigate();
-  const { state } = useLocation();
+  const { state: prevState } = useLocation();
 
   const [intro, setIntro] = useState("");
   const taRef = useRef(null);
@@ -21,12 +21,16 @@ const StudyAnnounce = () => {
   }, [intro]);
 
   const goNext = () => {
+    console.log(prevState)
+    setTimeout(10000)
     navigate("/study/new/final", {
       state: {
-        ...(state ?? {}),
+        ...(prevState ?? {}),
         intro: intro.trim(),
       },
     });
+
+    
   };
 
   return (

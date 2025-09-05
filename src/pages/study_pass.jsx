@@ -5,9 +5,9 @@ import CTAButton from "../components/CTAButton";
 
 const StudySuccess = () => {
   const navigate = useNavigate();
-  const { state } = useLocation();
+  const { state :prevState } = useLocation();
 
-  const totalChallenges = state?.challengeCount ?? 5;
+  const totalChallenges = prevState?.challengeCount ?? 5;
 
 
   const [minSuccess, setMinSuccess] = useState("");
@@ -25,7 +25,7 @@ const StudySuccess = () => {
     // TODO: 다음 단계로 상태 전달
     navigate("/study/new/notice", {
       state: {
-        ...state,
+        ...prevState,
         successThreshold: normalized,
       },
     });

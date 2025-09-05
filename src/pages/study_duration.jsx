@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/study_duration.css";
 import CTAButton from "../components/CTAButton";
 import BottomSheetDate from "../components/Bottomdate";
@@ -15,6 +15,9 @@ const StudyPeriod = () => {
   const navigate = useNavigate();
 
   const today = useMemo(() => new Date(), []);
+
+  const {state: prevState} = useLocation();
+
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
 
@@ -48,7 +51,7 @@ const StudyPeriod = () => {
 
   const goNext = () => {
     navigate("/study/new/how", {
-      state: { startDate: startDate?.toISOString(), endDate: endDate?.toISOString() },
+      state: { ...prevState ,startDate: startDate?.toISOString(), endDate: endDate?.toISOString() },
     });
   };
 
