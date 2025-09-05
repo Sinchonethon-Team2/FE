@@ -1,0 +1,97 @@
+.sd2__page{
+  max-width:390px; width:100%; margin:0 auto;
+  min-height:100dvh; background:#fff; color:#111;
+  display:flex; flex-direction:column; box-sizing:border-box;
+}
+
+.sd2__header{
+  position:fixed; top:0; left:0; right:0; height:52px;
+  display:flex; align-items:center; padding:0 8px;
+  background:transparent; z-index:10; max-width:390px; margin:0 auto;
+}
+.sd2__backbtn{
+  width:44px; height:44px; border:none; background:transparent;
+  display:inline-flex; align-items:center; justify-content:center; cursor:pointer;
+}
+.sd2__iconImg{ width:20px; height:20px; display:block; }
+
+.sd2__hero{
+  background:#FF5F40;
+  color:#fff;
+  padding:16px 16px 30px;
+  border-bottom-left-radius:0;
+  border-bottom-right-radius:0;
+}
+.sd2__heroTop{
+  display:flex; align-items:center; justify-content:space-between; gap:8px;
+}
+.sd2__title{
+  font-size:22px; font-weight:800;
+  margin:30px 0 4px;
+}
+.sd2__edit{
+  width:30px; height:30px; border-radius:50%;
+  background:#FFFFFF;
+  border:none; display:grid; place-items:center; cursor:pointer;
+  box-shadow:0 1px 2px rgba(0,0,0,0.1);
+}
+.sd2__subtitle{ opacity:.95; margin:2px 0 4px; font-size:13px; }
+.sd2__progress{ opacity:.95; margin:0 0 6px; font-size:13px; }
+.sd2__deposit{ margin:2px 0 0; font-size:13px; }
+.sd2__deposit strong{ font-weight:800; }
+
+.sd2__section{
+  width:100%;
+  margin:0 auto;
+  border-radius:18px;
+  overflow:hidden;
+  max-width:390px;
+}
+.sd2__section--done{
+  background:#FFF0DF;
+  margin-top:-15px;
+  padding:10px 0 0px;
+}
+.sd2__section--done .sd2__list{ background:#FFF0DF; 
+padding-bottom: 30px;}
+
+.sd2__section--upcoming{
+  background:#FFFFFF;
+  margin-top:-20px;  
+  padding:10px 0 0;
+}
+.sd2__section--upcoming .sd2__list{ background:#FFFFFF; }
+
+.sd2__sectionHead{
+  padding:0 20px 10px; 
+  font-size:13px; font-weight:700; color:#6d6d6d;
+}
+
+.sd2__list{
+  list-style:none; margin:0;
+  padding:0 36px 10px;  
+  border-radius:18px;
+}
+
+.sd2__item{
+  display:flex; align-items:center; gap:8px;
+  padding:14px 0;
+  border-bottom:1px dashed #D8D8DA;
+}
+.sd2__item:last-child{ border-bottom:none; }
+
+.sd2__itemTitle{ font-size:15px; font-weight:700; flex:1; }
+
+.sd2__badge{
+  font-size:12px; font-weight:700; color:#E24B2A; white-space:nowrap; margin-left:8px;
+}
+
+.sd2__chevronImg{
+  width:18px; height:18px; display:block; margin-left:6px; opacity:.7;
+}
+
+.sd2__item.is-clickable{ cursor:pointer; }
+.sd2__item.is-clickable:active{ opacity:.85; }
+.sd2__item:not(.is-clickable){ cursor:default; pointer-events:none; }
+
+.sd2__bottomBar{ height:24px; }

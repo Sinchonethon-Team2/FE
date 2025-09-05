@@ -18,6 +18,10 @@ import Finish from "./pages/study_final";
 
 // 상세 챌린지
 import StudyDetail from "./pages/quest_detail";
+import StudyDetailDone from "./pages/quest_detail_done";
+
+// 챌린지 신청
+import StudyApply from "./pages/studyapply";
 
 export default function App() {
   return (
@@ -42,6 +46,11 @@ export default function App() {
 
         {/* 상세 퀘스트 페이지(레이아웃 없이) */}
         <Route path="/study/detail/:id" element={<StudyDetail />} />
+        <Route path="/study/detail/:id/done" element={<StudyDetailDone />} />
+
+        {/* 퀘스트 신청 */}
+        <Route path="/study/apply" element={<StudyApply />} />
+
         <Route path="*" element={<Navigate to="/home" replace />} />
       </Routes>
     </BrowserRouter>
