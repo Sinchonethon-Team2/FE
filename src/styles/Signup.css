@@ -1,0 +1,110 @@
+/* 캔버스 */
+.su__page{
+  width:390px;
+  min-height:100svh;
+  margin:0 auto;
+  background:#fff;
+  padding:24px 24px 96px;
+  box-sizing:border-box;
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",
+    Roboto,"Helvetica Neue",Arial,"Noto Sans KR",sans-serif;
+}
+
+/* 타이틀 */
+.su__title{
+  font-size:18px;
+  font-weight:800;
+  color:#111;
+  margin:0 0 10px;
+}
+.su__subtitle{
+  font-size:16px;
+  font-weight:700;
+  color:#111;
+  margin:0 0 24px;
+}
+
+/* 폼 */
+.su__form{
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+/* 인풋: 밑줄형 */
+.su__field{
+  position:relative;
+  display:block;
+}
+.su__field input{
+  width:100%;
+  padding:12px 0 10px;
+  border:0;
+  outline:0;
+  background:transparent;
+  font-size:14px;
+  color:#111;
+}
+.su__underline{
+  position:absolute;
+  left:0; right:0; bottom:0;
+  height:1px;
+  background:#ccc;
+}
+.su__field input:focus + .su__underline{
+  background:#FA7A1E;
+  height:2px;
+}
+
+/* 셀렉트(드롭다운) */
+.su__select-wrap{
+  position:relative;
+  display:block;
+  background:#f7f7f7;
+  border-radius:8px;
+  padding:0 12px;
+  height:44px;
+}
+.su__select-wrap select{
+  -webkit-appearance:none; appearance:none;
+  width:100%;
+  height:44px;
+  border:0; outline:0;
+  background:transparent;
+  font-size:14px;
+  color:#111;
+}
+.su__select-arrow{
+  position:absolute;
+  right:12px; top:50%; transform:translateY(-50%);
+  pointer-events:none;
+  color:#888;
+}
+
+/* 버튼들 */
+.su__actions{
+  margin-top:24px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+}
+.su__btn{
+  width:160px;            /* 두 버튼 나란히 */
+  height:44px;
+  border-radius:8px;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  border:0;
+}
+.su__btn--ghost{
+  background:#f2f2f2;
+  color:#333;
+}
+.su__btn--primary{
+  background:#FA7A1E;     /* 오렌지 */
+  color:#fff;
+}
+.su__btn--primary:disabled{
+  opacity:.5; cursor:not-allowed;
+}

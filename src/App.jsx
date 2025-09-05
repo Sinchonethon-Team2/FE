@@ -14,7 +14,8 @@ import StudySuccess from "./pages/study_pass";
 import StudySubject from "./pages/study_subject";
 import StudyDetail from "./pages/StudyDetail";
 import SmallChallenge from "./pages/SmallChallenge";
-
+import Signup from "./pages/Signup";
+import Login from "./pages/Login";
 
 export default function App() {
   return (
@@ -28,6 +29,8 @@ export default function App() {
         </Route>
         <Route element={<NoNav />}>
           <Route path="/" element={<SmallChallenge />} />
+          <Route path="/signup" element={<Signup />} /> 
+          <Route path="/login" element={<Login />} />
           <Route path="/study/new/subject" element={<StudySubject />} />
           <Route path="/study/new/money" element={<StudyMoney />} />
           <Route path="/study/new/duration" element={<StudyPeriod />} />
