@@ -1,0 +1,91 @@
+
+.sp__page {
+  width: 390px;
+  max-width: 390px;
+  min-height: 100svh;
+  background: #fff;
+  padding-bottom: env(safe-area-inset-bottom);
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.sp__header {
+  height: 56px;
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  align-items: center;
+  padding: 20px 8px;
+}
+.sp__backbtn {
+  width: 40px; height: 40px; display: grid; place-items: center;
+  border: 0; background: transparent; padding: 0; margin-left: 4px;
+}
+.sp__headertitle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+.sp__headerright { /*  */ }
+
+
+.sp__titlewrap {
+  padding: 30px 40px 0 20px;
+}
+.sp__title {
+  margin: 8px 0 16px 0;
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: #111;
+}
+
+.sp__search { padding: 0 20px; 
+margin-top: 20px;}
+.sp__searchbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px 44px 12px 14px;
+}
+.sp__searchbox--elev {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+.sp__searchinput {
+  flex: 1;
+  border: 0; outline: 0; background: transparent;
+  font-size: 14px; color: #111;
+}
+.sp__searchbtn {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  width: 28px; height: 28px; border: 0; background: transparent; padding: 0;
+}
+.sp__searchbtn img { width: 20px; height: 20px; display: block; }
+
+.sp__footer {
+  margin-top: auto;
+  padding: 20px;
+  padding-bottom: calc(20px + env(safe-area-inset-bottom));
+  background: linear-gradient(to top, #fff 70%, rgba(255,255,255,0));
+}
+.sp__cta {
+  width: 100%;
+  height: 48px;
+  border: 0;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  background: #EE8120;
+  box-shadow: 0 6px 14px rgba(255,138,0,0.3);
+  cursor: pointer;
+}
+.sp__cta:disabled {
+  opacity: 0.5;
+  box-shadow: none;
+}

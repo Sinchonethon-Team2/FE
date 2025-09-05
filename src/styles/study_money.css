@@ -1,0 +1,69 @@
+.sp__page {
+  width: 390px;
+  max-width: 390px;
+  min-height: 100svh;
+  background: #fff;
+  padding-bottom: env(safe-area-inset-bottom);
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans KR", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.sp__header {
+  height: 56px;
+  display: grid;
+  grid-template-columns: 56px 1fr 56px;
+  align-items: center;
+  padding: 20px 8px;
+}
+.sp__backbtn {
+  width: 40px; height: 40px; display: grid; place-items: center;
+  border: 0; background: transparent; padding: 0; margin-left: 4px;
+}
+.sp__headertitle {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+.sp__headerright {}
+
+.sp__titlewrap { padding: 30px 40px 0 20px; }
+.sp__title {
+  margin: 8px 0 16px 0;
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 800;
+  color: #111;
+}
+
+.sp__form {
+  padding: 0 20px;
+  margin-top: 8px;
+}
+.sp__label {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  color: #111;
+  margin: 18px 0 8px;
+}
+
+.sp__inputbox {
+  position: relative;
+  background: #F8F9FA;
+  border-radius: 16px;
+  padding: 12px 14px;
+  cursor: pointer;
+}
+.sp__inputbox--elev {
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+.sp__input {
+  width: 100%;
+  border: 0; outline: 0; background: transparent;
+  font-size: 14px; color: #111;
+}
+.sp__input::placeholder { color: #ADB5BD; }
+
