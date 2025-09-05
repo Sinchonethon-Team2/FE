@@ -5,7 +5,7 @@ import "../styles/home.css";
 import logoBlack from "../assets/icons/logo_black.png";
 import profileDemo from "../assets/icons/profile_demo.png";
 import searchIcon from "../assets/icons/Search.png";    
-import moreIcon from "../assets/icons/more.png";      
+import moreIcon from "../assets/icons/more.svg";      
 import calenderIcon from "../assets/icons/Calender.png";
 import profileIcon from "../assets/icons/profile.png"; 
 import homeIcon from "../assets/icons/Home.png";
