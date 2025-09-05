@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // 아이콘 경로는 실제 프로젝트 구조에 맞게 확인해주세요.
 import awardIcon from "../assets/icons/Badge.png";
@@ -11,6 +12,7 @@ import "../styles/MyPage.css"
 
 const MyPage = () => {
   const profileImageUrl = "https://i.pravatar.cc/150?u=a042581f4e29026704d";
+  const nav = useNavigate();
 
   return (
     <div className="sh__page">
@@ -48,9 +50,15 @@ const MyPage = () => {
       {/* 메뉴 링크 섹션 */}
       <section className="sh__section">
         <ul className="sh__menu-list">
-          <li className="sh__menu-item">
+          <li 
+            className="sh__menu-item"
+            onClick={()=>nav("/food")}
+            >
             <img src={awardIcon} alt="달성률 아이콘" className="sh__menu-icon" />
+           
+            
             <span>내 달성률·도시락</span>
+
             <img src={chevronRightIcon} alt="오른쪽 화살표" className="sh__menu-arrow" />
           </li>
           <li className="sh__menu-item">

@@ -16,6 +16,7 @@ import StudyDetail from "./pages/StudyDetail";
 import SmallChallenge from "./pages/SmallChallenge";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
+import Food from "./pages/Food";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="/" element={<SmallChallenge />} />
           <Route path="/signup" element={<Signup />} /> 
           <Route path="/login" element={<Login />} />
+          <Route path="/food" element={<Food />} />
           <Route path="/study/new/subject" element={<StudySubject />} />
           <Route path="/study/new/money" element={<StudyMoney />} />
           <Route path="/study/new/duration" element={<StudyPeriod />} />
