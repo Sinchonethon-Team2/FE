@@ -47,7 +47,7 @@ const StudyPeriod = () => {
   const canNext = !!startDate && !!endDate;
 
   const goNext = () => {
-    navigate("/study/new/details", {
+    navigate("/study/new/how", {
       state: { startDate: startDate?.toISOString(), endDate: endDate?.toISOString() },
     });
   };

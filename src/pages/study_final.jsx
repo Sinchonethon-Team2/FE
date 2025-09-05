@@ -1,7 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import "../styles/study_final.css";
-import NextButton from "../components/CTAButton";
 
 import completeImg from "../assets/icons/study_final.png";
 
@@ -74,8 +73,6 @@ const StudyDone = () => {
     };
   }, [subject, studyId]);
 
-  const goHome = () => navigate("/");
-  const goDetail = () => goHome();
 
   return (
     <div className="sd__page">

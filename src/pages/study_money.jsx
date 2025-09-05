@@ -9,7 +9,7 @@ const StudyMoney = () => {
   const [deposit, setDeposit] = useState("");
 
   const goNext = () => {
-    navigate("/study/new/details", { state: { headcount, deposit } });
+    navigate("/study/new/duration", { state: { headcount, deposit } });
   };
 
   const canNext = String(headcount).trim() !== "" && String(deposit).trim() !== "";

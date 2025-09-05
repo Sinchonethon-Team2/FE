@@ -10,7 +10,7 @@ const StudySubject = () => {
   const [subject, setSubject] = useState("");
 
   const goNext = () => {
-    navigate("/study/new/details", { state: { subject } });
+    navigate("/study/new/money", { state: { subject } });
   };
 
   return (

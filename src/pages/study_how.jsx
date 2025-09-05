@@ -15,7 +15,7 @@ const StudyOperate = () => {
   }, [title, challengeCnt]);
 
   const goNext = () => {
-    navigate("/study/new/period", {
+    navigate("/study/new/pass", {
       state: {
         title: title.trim(),
         challengeCount: Number(challengeCnt),

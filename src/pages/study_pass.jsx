@@ -23,7 +23,7 @@ const StudySuccess = () => {
 
   const goNext = () => {
     // TODO: 다음 단계로 상태 전달
-    navigate("/study/new/confirm", {
+    navigate("/study/new/notice", {
       state: {
         ...state,
         successThreshold: normalized,
