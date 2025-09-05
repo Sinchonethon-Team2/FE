@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/study_subject.css";
-import NextButton from "../components/NextButton";
+import NextButton from "../components/CTAButton";
 
 import searchIcon from "../assets/icons/Search.png";
 
