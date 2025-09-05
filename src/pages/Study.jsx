@@ -82,7 +82,7 @@ const Study = () => {
         <button
           className="st__action"
           type="button"
-          onClick={() => navigate("/study/new")}
+          onClick={() => navigate("/study/new/subject")}
         >
           <div className="st__action-text">
             <p>함께 해야 시너지가 나니까</p>

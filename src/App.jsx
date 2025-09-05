@@ -1,42 +1,41 @@
 import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-
-// 레이아웃 & 메인 네비
 import MainLayout from "./layout/Mainlayout";
+import NoNav from "./layout/NoNav";
 import StudyHome from "./pages/Homepage";
 import MyPage from "./pages/MyPage";
 import Study from "./pages/Study";
+import StudyPeriod from "./pages/study_duration";
+import StudyDone from "./pages/study_final";
+import StudyOperate from "./pages/study_how";
+import StudyMoney from "./pages/study_money";
+import StudyAnnounce from "./pages/study_notice";
+import StudySuccess from "./pages/study_pass";
+import StudySubject from "./pages/study_subject";
+import StudyDetail from "./pages/StudyDetail";
 
-// 스터디 생성
-import Challenge from "./pages/study_subject";
-import Money from "./pages/study_money";
-import Duration from "./pages/study_duration";
-import How from "./pages/study_how";
-import Pass from "./pages/study_pass";
-import Notice from "./pages/study_notice";
-import Finish from "./pages/study_final";
 
 export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* 공통 레이아웃이 필요한 화면 */}
         <Route element={<MainLayout />}>
           <Route path="/" element={<Navigate to="/home" replace />} />
           <Route path="/home" element={<StudyHome />} />
           <Route path="/study" element={<Study />} />
           <Route path="/mypage" element={<MyPage />} />
+          <Route path="/study-detail" element={<StudyDetail />} />
         </Route>
-
-        {/* 스터디 생성 (레이아웃 없이) */}
-        <Route path="/study/new/subject" element={<Challenge />} />
-        <Route path="/study/new/money" element={<Money />} />
-        <Route path="/study/new/duration" element={<Duration />} />
-        <Route path="/study/new/how" element={<How />} />
-        <Route path="/study/new/pass" element={<Pass />} />
-        <Route path="/study/new/notice" element={<Notice />} />
-        <Route path="/study/new/final" element={<Finish />} />
-        <Route path="*" element={<Navigate to="/home" replace />} />
+        <Route element={<NoNav />}>
+          <Route path="/study/new/subject" element={<StudySubject />} />
+          <Route path="/study/new/money" element={<StudyMoney />} />
+          <Route path="/study/new/duration" element={<StudyPeriod />} />
+          <Route path="/study/new/how" element={<StudyOperate />} />
+          <Route path="/study/new/pass" element={<StudySuccess />} />
+          <Route path="/study/new/notice" element={<StudyAnnounce />} />
+          <Route path="/study/new/final" element={<StudyDone />} />
+          <Route path="*" element={<Navigate to="/home" replace />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

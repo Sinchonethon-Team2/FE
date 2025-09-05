@@ -3,7 +3,7 @@ import { Outlet } from "react-router-dom";
 import NavbarBottom from "./BottomNav";
 import "./MainLayout.css"
 
-export default function MainLayout() {
+export default function NoNav() {
   return (
     <div className="app-shell">
       {/* 가운데 390px 캔버스 */}
@@ -13,7 +13,6 @@ export default function MainLayout() {
           <Outlet />
         </div>
       </div>
-      <NavbarBottom />
     </div>
   );
 }

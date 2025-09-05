@@ -51,6 +51,7 @@ margin-bottom: 70px;}
   background: #fff;         
   border-radius: 24px;
   padding: 12px 44px 12px 16px; 
+  cursor: pointer;
 }
 .sh__searchbox--elev {
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
