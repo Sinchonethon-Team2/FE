@@ -1,11 +1,9 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import { useLocation, useSearchParams } from "react-router-dom";
 import "../styles/study_final.css";
-
 import completeImg from "../assets/icons/study_final.png";
 
-const API_BASE = import.meta.env.VITE_API_BASE || "";
-
+const API_BASE = import.meta.env.VITE_API_BASE ? import.meta.env.VITE_API_BASE : ""; 
 
 const USE_MOCK = true;
 
@@ -15,14 +13,16 @@ const MOCK_STUDY = {
 };
 
 const StudyDone = () => {
-  const navigate = useNavigate();
   const { state } = useLocation();
   const [params] = useSearchParams();
 
-  const studyId = useMemo(
-    () => state?.studyId ?? Number(params.get("studyId")) ?? null,
-    [state, params]
-  );
+  const studyId = useMemo(() => {
+    const fromState = state?.studyId;
+    if (fromState != null) return fromState;             
+
+    const fromQuery = params.get("studyId");
+    return fromQuery != null ? Number(fromQuery) : null;
+  }, [state, params]);
 
   const [subject, setSubject] = useState(state?.subject ?? "");
   const [loading, setLoading] = useState(!subject);
@@ -36,7 +36,6 @@ const StudyDone = () => {
         setLoading(false);
         return;
       }
-
 
       if (USE_MOCK) {
         setLoading(true);
@@ -53,6 +52,7 @@ const StudyDone = () => {
         setLoading(false);
         return;
       }
+
       try {
         setLoading(true);
         setError("");
@@ -68,11 +68,8 @@ const StudyDone = () => {
       }
     })();
 
-    return () => {
-      alive = false;
-    };
+    return () => { alive = false; };
   }, [subject, studyId]);
-
 
   return (
     <div className="sd__page">
@@ -93,14 +90,7 @@ const StudyDone = () => {
           <img src={completeImg} alt="완료 일러스트" className="sd__image" />
         </div>
       </main>
-{/* 
-      <footer className="sd__footer">
-        <NextButton
-          label={studyId ? "스터디로 이동" : "홈으로"}
-          onClick={studyId ? goDetail : goHome}
-          disabled={false}
-        />
-      </footer> */}
+
 
       {error && <div className="sd__toast">{error}</div>}
     </div>
