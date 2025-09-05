@@ -1,0 +1,30 @@
+
+.op__form {
+  padding: 0 20px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.op__label {
+  font-size: 12px;
+  color: #8f8f8f;
+  margin: 18px 0 8px;
+}
+
+.op__input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  color: #111;
+  padding: 10px 0;
+  border-bottom: 1px solid #DADDE1; 
+}
+
+.op__hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #EE8120;
+}
