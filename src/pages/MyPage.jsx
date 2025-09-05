@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 // 아이콘 경로는 실제 프로젝트 구조에 맞게 확인해주세요.
 import awardIcon from "../assets/icons/Badge.png";
 import plusCircleIcon from "../assets/icons/mynaui_chat-plus.png";
-import chevronRightIcon from "../assets/icons/Chevron Down.png"; // 오른쪽 화살표 아이콘으로 변경 권장
 
 
 // CSS 파일 import 경로는 실제 프로젝트 구조에 맞게 확인해주세요.
