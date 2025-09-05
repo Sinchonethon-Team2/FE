@@ -6,6 +6,9 @@ import Challenge from "./pages/study_subject";
 import Money from "./pages/study_money"
 import Duration from "./pages/study_duration"
 import How from "./pages/study_how"
+import Pass from "./pages/study_pass"
+import Notice from "./pages/study_notice"
+import Finish from "./pages/study_final"
 
 const App = () => {
   return (
@@ -22,6 +25,12 @@ const App = () => {
         <Route path="/study/new/duration" element={<Duration />} />
         {/* 스터디 생성 - 계획/방법(how) */}
         <Route path="/study/new/how" element={<How />} />
+        {/* 스터디 생성 - 기준 설정(pass) */}
+        <Route path="/study/new/pass" element={<Pass />} />
+        {/* 스터디 생성 - 공지사항(notice) */}
+        <Route path="/study/new/notice" element={<Notice />} />
+        {/* 스터디 생성 - 최종(final) */}
+        <Route path="/study/new/final" element={<Finish />} />
       </Routes>
     </Router>
   );

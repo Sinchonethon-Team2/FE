@@ -1,0 +1,39 @@
+.ss__row {
+  padding: 0 20px;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 16px;
+  color: #111;
+}
+
+.ss__number {
+  font-weight: 800;
+  font-size: 16px;
+}
+
+.ss__input {
+  width: 52px;             
+  height: 32px;
+  margin: 0 2px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
+
+  border: 0;
+  border-bottom: 1px solid #DADDE1; 
+  background: transparent;
+  outline: none;
+}
+
+.ss__input:focus {
+  border-bottom-color: #EE8120;
+}
+
+.ss__subtext {
+  padding: 8px 20px 0;
+  font-size: 16px;
+  color: #60656b;
+}
