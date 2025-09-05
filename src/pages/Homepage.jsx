@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import studies from "../data/studiesmock.json";
 import "../styles/Homepage.css";
 
-import logoBlack from "../assets/icons/logo_black.png";
+import logoBlack from "../assets/icons/logo.svg";
 import profileDemo from "../assets/icons/profile_demo.png";
 import searchIcon from "../assets/icons/Search.png";    
 import moreIcon from "../assets/icons/more.svg";      
@@ -15,8 +15,8 @@ const StudyHome = () => {
   return (
     <div className="sh__page">
       <header className="sh__header">
-        <div className="sh__logo" onClick={() => navigate("/")}>
-          <img src={logoBlack} alt="스챌 로고" />
+        <div className="sh__logo">
+          <img src={logoBlack} alt="스챌 로고"/>
         </div>
         <button
           className="sh__profile"

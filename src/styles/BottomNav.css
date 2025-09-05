@@ -55,3 +55,8 @@
 
 /* 네비 가림 방지 여백 */
 .nb__spacer{ height: 62px; }
+
+.logo_size {
+  width: 82px;
+  height: 40px;
+}
