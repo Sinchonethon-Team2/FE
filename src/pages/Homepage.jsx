@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import studies from "../data/studies.json";
+import studies from "../data/studiesmock.json";
 import "../styles/home.css";
 
 import logoBlack from "../assets/icons/logo_black.png";
