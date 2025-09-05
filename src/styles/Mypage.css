@@ -1,156 +1,114 @@
-/* src/MyPage.css */
-
-/* 전체적인 폰트 및 배경 설정 */
+/* --- 기본 & 페이지 레이아웃 --- */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  background-color: #f0f2f5;
+}
+
+.sh__page {
+  max-width: 420px;
+  min-height: 100svh;
+  margin: 0 auto;
+  background: #fff;
+  padding-bottom: 20px; /* 네비게이션이 없으므로 하단 여백 조정 */
+  font-family: Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: #f0f2f5; /* 앱 바깥 배경색 */
 }
 
-/* 페이지 컨테이너 (스마트폰 화면처럼 보이게) */
-.my-page-container {
-  width: 375px; /* 아이폰 13/14 너비 */
-  height: 812px; /* 아이폰 13/14 높이 */
-  margin: 2rem auto;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 20px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  overflow: hidden;
+/* --- 헤더 --- */
+.sh__header {
+  padding: 16px 20px;
 }
-
-.my-page-content {
-  padding: 24px;
-  flex: 1;
-}
-
-/* 헤더 */
-.my-page-header h1 {
+.sh__header h1 {
   font-size: 22px;
   font-weight: 700;
-  margin: 0 0 24px 0;
+  margin: 0;
 }
 
-/* 프로필 */
-.profile-section {
+/* --- 프로필 --- */
+.sh__profile-display {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 36px;
+  padding: 16px 0 32px;
 }
-
-.profile-picture {
+.sh__profile-picture {
   width: 90px;
   height: 90px;
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 12px;
 }
-
-.profile-name {
-  font-size: 18px;
-  font-weight: 600;
-  margin: 0;
-}
-
-/* 스터디 현황 */
-.status-section h2 {
+.sh__profile-name {
   font-size: 16px;
   font-weight: 600;
-  color: #333;
-  margin: 0 0 16px 0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.status-cards-container {
+/* --- 공용 섹션 --- */
+.sh__section {
+  padding: 16px 20px;
+}
+.sh__section-head {
+  margin-bottom: 12px;
+}
+.sh__section-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1d1d1d;
+}
+
+/* --- 스터디 현황 카드 --- */
+.sh__grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+.sh__card.sh__status-card {
   display: flex;
-  gap: 16px;
-}
-
-.status-card {
-  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 16px;
   background-color: #fff;
   border: 1px solid #f0f0f0;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
-
-.status-number {
-  display: block;
+.sh__status-number {
   font-size: 28px;
   font-weight: 700;
-  margin-bottom: 4px;
+  color: #1d1d1d;
 }
-
-.status-label {
+.sh__status-label {
   font-size: 14px;
   color: #888;
 }
 
-/* 메뉴 */
-.menu-section {
-  margin-top: 40px;
+/* --- 메뉴 리스트 --- */
+.sh__menu-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-
-.menu-item {
+.sh__menu-item {
   display: flex;
   align-items: center;
   padding: 16px 4px;
   cursor: pointer;
 }
-
-.menu-item span {
+.sh__menu-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+}
+.sh__menu-item span {
   flex-grow: 1;
   font-size: 16px;
 }
-
-/* --- PNG 아이콘 스타일 (수정된 부분) --- */
-.menu-icon {
-  width: 20px; /* 아이콘 너비 */
-  height: 20px; /* 아이콘 높이 */
-  margin-right: 16px;
-}
-
-.menu-arrow {
-  width: 18px; /* 화살표 너비 */
-  height: 18px; /* 화살표 높이 */
-}
-/* ------------------------------------ */
-
-/* 하단 네비게이션 */
-.bottom-nav {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: space-around;
-  background-color: #ffffff;
-  border-top: 1px solid #f0f0f0;
-  padding: 8px 0 20px 0; /* 아래쪽 여백은 아이폰 하단 바 고려 */
-}
-
-.nav-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: #b0b0b0; /* 비활성 아이템 색상 */
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.nav-item.active {
-  color: #000000; /* 활성 아이템 색상 */
-}
-
-.nav-item svg {
-  margin-bottom: 4px;
+.sh__menu-arrow {
+  width: 16px;
+  height: 16px;
+  opacity: 0.4;
 }
