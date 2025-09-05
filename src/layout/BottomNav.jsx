@@ -1,35 +1,45 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "../styles/BottomNav.css";
 
+// 아이콘 import
 import homeIcon from "../assets/home.png";
-import studyIcon from "../assets/mypage.png"; // 파일명 매칭 확인!
-import myIcon    from "../assets/study.png";  // 파일명 매칭 확인!
+import homeIconActive from "../assets/home1.png";
+
+import studyIcon from "../assets/study.png";
+import studyIconActive from "../assets/study1.png";
+
+import myIcon from "../assets/mypage.png";
+import myIconActive from "../assets/mypage1.png";
 
 export default function NavbarBottom() {
-  const { pathname } = useLocation();
+  // 기본값: "home"
+  const [activeTab, setActiveTab] = useState("home");
 
   const items = [
-    { to: "/home",       icon: homeIcon },
-    { to: "/study",   icon: studyIcon },
-    { to: "/mypage", icon: myIcon },
+    { to: "/home", key: "home", label: "홈", icon: homeIcon, iconActive: homeIconActive },
+    { to: "/study", key: "study", label: "스터디", icon: studyIcon, iconActive: studyIconActive },
+    { to: "/mypage", key: "mypage", label: "마이페이지", icon: myIcon, iconActive: myIconActive },
   ];
 
   return (
     <>
       <div className="nb__spacer" />
       <nav className="nb">
-        {items.map(({ to, label, icon }) => (
+        {items.map(({ to, key, label, icon, iconActive }) => (
           <Link
             key={to}
             to={to}
-            className={`nb__item ${pathname === to ? "is-active" : ""}`}
+            className="nb__item"
+            onClick={() => setActiveTab(key)}
           >
-            {/* 아이콘이 꽉 차는 영역 */}
             <div className="nb__icon-wrap">
-              <img className="nb__icon" src={icon} alt={label} />
+              <img
+                className="nb__icon"
+                src={activeTab === key ? iconActive : icon}
+                alt={label}
+              />
             </div>
-            {/* 텍스트는 아이콘 박스 바깥(아래) 고정 */}
             <span className="nb__label">{label}</span>
           </Link>
         ))}
