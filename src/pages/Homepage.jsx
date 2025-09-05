@@ -15,7 +15,6 @@ const StudyHome = () => {
 
   return (
     <div className="sh__page">
-      {/* 헤더 */}
       <header className="sh__header">
         <div className="sh__logo">
           <img src={logoBlack} alt="스챌 로고" />
