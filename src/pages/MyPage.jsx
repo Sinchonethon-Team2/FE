@@ -1,12 +1,9 @@
 import React from "react";
-import {
-  FiAward,
-  FiPlusCircle,
-  FiChevronRight,
-  FiHome,
-  FiCalendar,
-  FiUser,
-} from "react-icons/fi"; // 아이콘 임포트
+
+import awardIcon from "../assets/icons/Badge.png";
+import plusCircleIcon from "../assets/icons/mynaui_chat-plus.png";
+import chevronRightIcon from "../assets/icons/Chevron Down.png";
+import '../styles/MyPage.css'
 
 const MyPage = () => {
   //유저 정보
@@ -48,14 +45,26 @@ const MyPage = () => {
         {/* 메뉴 링크 섹션 */}
         <section className="menu-section">
           <div className="menu-item">
-            <FiAward className="menu-icon" />
+            <img src={awardIcon} alt="달성률 아이콘" className="menu-icon" />
             <span>내 달성률·도시락</span>
-            <FiChevronRight className="menu-arrow" />
+            <img
+              src={chevronRightIcon}
+              alt="오른쪽 화살표"
+              className="menu-arrow"
+            />
           </div>
           <div className="menu-item">
-            <FiPlusCircle className="menu-icon" />
+            <img
+              src={plusCircleIcon}
+              alt="문의하기 아이콘"
+              className="menu-icon"
+            />
             <span>문의하기</span>
-            <FiChevronRight className="menu-arrow" />
+            <img
+              src={chevronRightIcon}
+              alt="오른쪽 화살표"
+              className="menu-arrow"
+            />
           </div>
         </section>
       </div>
