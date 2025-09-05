@@ -1,0 +1,24 @@
+/* 바깥은 검정 */
+.app-shell {
+  min-height: 100vh;
+  background: #000;        /* ✅ body 검정과 일치 */
+  display: flex;
+  justify-content: center; /* 가운데 정렬 */
+}
+
+/* 가운데 390px 흰색 캔버스 */
+.main-wrap {
+  width: 390px;
+  min-height: 100svh;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 컨텐츠 여백 */
+.content {
+  flex: 1;
+  padding-bottom: 72px;
+}
