@@ -1,0 +1,26 @@
+[
+  {
+    "id": "s1",
+    "title": "객체지향프로그래밍",
+    "period": "2025.10.17 - 2025.11.15",
+    "target": 6,
+    "challengeCount": 8,
+    "thumbnailUrl": ""
+  },
+  {
+    "id": "s2",
+    "title": "자료구조",
+    "period": "2025.10.17 - 2025.11.15",
+    "target": 6,
+    "challengeCount": 6,
+    "thumbnailUrl": ""
+  },
+  {
+    "id": "s3",
+    "title": "운영체제",
+    "period": "2025.10.17 - 2025.11.15",
+    "target": 6,
+    "challengeCount": 6,
+    "thumbnailUrl": ""
+  }
+]
